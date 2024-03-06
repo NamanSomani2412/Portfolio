@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Naman Somani</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #video-bg {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            color: #fff;
+            font-family: Poppins, sans-serif;
+        }
+
+
+        .Main {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .Main .welcome-container {
+            top: 0%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 50%;
+            height: 100vh;
+            flex-wrap: nowrap;
+        }
+
+        .Main .welcome-container .message_1 {
+            margin-top: 27vh;
+            font-size: 2em;
+            text-align: left;
+            padding: 10px;
+            min-width: max-content;
+            min-height: max-content;
+            color: #defffc;
+            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
+            -webkit-text-stroke: 0.2px #fff;
+            line-height: 1.5;
+            margin-left: 15%;
+        }
+
+        .Main .welcome-container .message {
+            position: static;
+            font-size: 2em;
+            text-align: left;
+            padding: 10px;
+            min-width: max-content;
+            min-height: max-content;
+            color: #defffc;
+            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
+            -webkit-text-stroke: 0.2px #fff;
+            line-height: 1.5;
+            margin-left: 15%;
+        }
+
+        .Main .image-container {
+            top: 0%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 50%;
+            height: 100vh;
+        }
+
+        .hexagon-top {
+            width: 260px;
+            height: 260px;
+            background: #00ffea;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            position: absolute;
+            top: 3vh;
+            right: 3vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .hexagon-mid {
+            width: 260px;
+            height: 260px;
+            background: #00ffea;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            position: absolute;
+            top: 32vh;
+            right: 24vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .hexagon-bottom {
+            width: 260px;
+            height: 260px;
+            background: #00ffea;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            position: absolute;
+            bottom: 3vh;
+            right: 3vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .hexagon-1 {
+            width: 250px;
+            height: 250px;
+            position: fixed;
+            background: #00ffea;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            background-image: url(IMG/image\(1\).png);
+            background-size: cover;
+        }
+
+        .hexagon-2 {
+            width: 250px;
+            height: 250px;
+            position: fixed;
+            background: #00ffea;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            background-image: url(IMG/image\(2\).png);
+            background-size: cover;
+        }
+
+        .hexagon-3 {
+            width: 250px;
+            height: 250px;
+            position: fixed;
+            background: #00ffea;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            background-image: url(IMG/image\(3\).png);
+            background-size: cover;
+        }
+
+        .get-into-button {
+            padding: 10px 20px;
+            position: absolute;
+            right: 85vh;
+            top: 70vh;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0);
+            /* Transparent background */
+        }
+
+        .arrow {
+            display: inline-block;
+            font-family: "Satisfy", cursive;
+            font-size: 50px;
+            color: #defffc;
+            margin: 0 10px;
+            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
+            -webkit-text-stroke: 0.2px #fff;
+        }
+
+        .button-text {
+            display: inline-block;
+            color: #defffc;
+            font-size: 24px;
+            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
+            -webkit-text-stroke: 0.2px #fff;
+            transition: color 1s;
+            /* Add transition for smooth color change */
+        }
+
+        .button-text:hover {
+            color: #defffc;
+            text-shadow: 0 0 2px #00aeff, 0 0 4px #00aeff, 0 0 6px #00aeff, 0 0 8px #00aeff, 0 0 10px #00aeff, 0 0 12px #00aeff, 0 0 14px #00aeff;
+            -webkit-text-stroke: 0.2px #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop id="video-bg">
+        <source src="IMG/bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="Main">
+        <div class="welcome-container">
+            <p class="message_1">Hii .. It's Naman Somani</p>
+            <p class="message"></p>
+        </div>
+        <div class="image-container">
+            <div class="hexagon-top">
+                <div class="hexagon-1"></div>
+            </div>
+            <div class="hexagon-mid">
+                <div class="hexagon-2"></div>
+            </div>
+            <div class="hexagon-bottom">
+                <div class="hexagon-3"></div>
+            </div>
+        </div>
+        <div>
+            <button onclick="redirectToMain()" class="get-into-button">
+                <span class="arrow">&lt;</span>
+                <span class="button-text">Get INTO..</span>
+                <span class="arrow">&gt;</span>
+            </button>
+        </div>
+
+    </div>
+    <script>
+        const welcomeMessage = document.querySelector('.message');
+        const messageText = [
+            ["Welcome to my Portfolio!"],
+            ["Come explore with me,"],
+            ["and discover the projects"],
+            ["that I'm passionate about."],
+        ];
+
+        let Lindex = 0;
+        let Windex = 0;
+
+        function typeWriter() {
+            if (Lindex < messageText.length) {
+                if (Windex < messageText[Lindex][0].length) {
+                    welcomeMessage.innerHTML += messageText[Lindex][0].charAt(Windex);
+                    Windex++;
+                    setTimeout(typeWriter, 25); // Adjust typing speed here
+                } else {
+                    welcomeMessage.innerHTML += "<br>"; // Add line break after completing a line
+                    Lindex++;
+                    Windex = 0; // Reset Windex for the next line
+                    setTimeout(typeWriter, 80); // Adjust typing speed here
+                }
+            }
+        }
+
+
+        function redirectToMain() {
+            window.location.href = "home.html";
+        }
+
+        document.addEventListener("DOMContentLoaded", typeWriter());
+    </script>
+</body>
+
+</html>

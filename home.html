@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Naman Somani</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root{
+            --winning-blocks : rgba(0, 255, 242, 0.637);
+        }
+
+        body {
+            overflow: hidden;
+            color: #fff;
+            font-family: Poppins, sans-serif;
+        }
+
+        #video-bg {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 50px;
+            background-color: RGB(44, 160, 171, 0.8);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li:first-child {
+            text-decoration: underline;
+            color: aqua;
+        }
+
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: aqua;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .first_section {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px 0;
+        }
+
+        .first_section>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            width: 33%;
+        }
+
+        .leftside {
+            min-width: 450px;
+            font-size: 2rem;
+            margin: 50px 50px;
+        }
+
+        .buttons {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            width: 100%;
+        }
+
+        .resume-download-button {
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0);
+            /* Transparent background */
+        }
+
+        .Contact-me-button {
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0);
+            /* Transparent background */
+        }
+
+        .arrow {
+            display: inline-block;
+            font-family: "Satisfy", cursive;
+            font-size: 50px;
+            color: #defffc;
+            margin: 0 10px;
+            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
+            -webkit-text-stroke: 0.2px #fff;
+        }
+
+        .button-text {
+            display: inline-block;
+            color: #defffc;
+            font-size: 24px;
+            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
+            -webkit-text-stroke: 0.2px #fff;
+            transition: color 1s;
+            /* Add transition for smooth color change */
+        }
+
+        .button-text:hover {
+            color: #defffc;
+            text-shadow: 0 0 2px #00aeff, 0 0 4px #00aeff, 0 0 6px #00aeff, 0 0 8px #00aeff, 0 0 10px #00aeff, 0 0 12px #00aeff, 0 0 14px #00aeff;
+            -webkit-text-stroke: 0.2px #fff;
+            text-decoration: underline;
+        }
+
+        .rightside {
+            display: flex;
+            align-items: center;
+            min-width: 450px;
+            height: 450px;
+            background-color: rgb(0, 0, 0, .8);
+            border-radius: 10px;
+            border: 1px solid rgb(208, 255, 255);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+            margin: 0 100px;
+        }
+
+        .game_name {
+            display: flex;
+            align-items: center;
+            ;
+            color: #defffc;
+            font-size: 30px;
+            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
+            -webkit-text-stroke: 0.2px #fff;
+        }
+
+        .game_update {
+            color: #ffffff;
+            font-size: 1rem;
+        }
+
+        .game_board {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px 0;
+            width: 270px;
+            cursor: pointer;
+        }
+
+
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Permanent Marker", cursive;
+            font-size: 3rem;
+            color: rgb(221, 252, 252);
+            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
+            -webkit-text-stroke: 0.2px #fff;
+            height: 88px;
+            width: 88px;
+            border-right: 3px solid #00ffea;
+            border-bottom: 3px solid #00ffea;
+        }
+
+        .box:nth-child(3n) {
+            border-right: none;
+        }
+
+        .box:nth-child(6) ~ .box {
+            border-bottom: none;
+        }
+
+        .reset-button {
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0);
+            /* Transparent background */
+        }
+
+        .color_Neon {
+            color: rgb(221, 252, 252);
+            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
+            -webkit-text-stroke: 0.2px #fff;
+            line-height: 1.5;
+        }
+
+        .popup {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(0, 0, 0 );
+            padding: 20px;
+            border: 1px solid rgb(208, 255, 255);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+            border-radius: 10px;
+            z-index: 1000;
+            color: aqua;
+        }
+
+        .popup h2{
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .popup p{
+            font-size: 1rem;
+            margin: 1px 0;
+        }
+
+        #closePopupBtn{
+            padding: 5px 10px;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <video autoplay muted loop id="video-bg">
+        <source src="IMG/bg.mp4" type="video/mp4">
+    </video>
+    <header>
+        <nav>
+            <div class="left">
+                Naman's Portfolio
+            </div>
+            <div class="right"></div>
+            <ul>
+                <li>Home</li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="Music.html">Music</a></li>
+                <li><a href="/">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="first_section">
+            <div class="leftside">
+                Hii, My name is <span class="color_Neon">Naman Somani</span>
+                <div>and I am a Passionate
+                    <div class="color_Neon">
+                        <span id="element"></span>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button onclick="redirectToResume()" class="resume-download-button">
+                        <span class="arrow">&lt;</span>
+                        <span class="button-text">Resume</span>
+                        <span class="arrow">&gt;</span>
+                    </button>
+                    <button class="Contact-me-button" id="contactMeBtn">
+                        <span class="arrow">&lt;</span>
+                        <span class="button-text">Contact</span>
+                        <span class="arrow">&gt;</span>
+                    </button>
+                    <div id="contactPopup" class="popup">
+                        <h2>Contact Details</h2>
+                        <p>Email: 13nsomani@gmail.com</p>
+                        <p>Phone: +918769920927</p>
+                        <button id="closePopupBtn">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="rightside">
+                <div class="game_name">
+                    <span class="arrow">&lt</span>Tic Tac Toe<span class="arrow">&gt</span>
+                </div>
+                <div class="game_update" id ="game_update">Player X's Turn
+                </div>
+                <div class="game_board">
+                        <div class="box" id="0"></div>
+                        <div class="box" id="1"></div>
+                        <div class="box" id="2"></div>
+                        <div class="box" id="3"></div>
+                        <div class="box" id="4"></div>
+                        <div class="box" id="5"></div>
+                        <div class="box" id="6"></div>
+                        <div class="box" id="7"></div>
+                        <div class="box" id="8"></div>
+                </div>
+                <button id="reset-button" class="reset-button">
+                    <span class="arrow">&lt;</span>
+                    <span class="button-text">Reset</span>
+                    <span class="arrow">&gt;</span>
+                </button>
+
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Graphic Designer', 'Web Designer'],
+            typeSpeed: 60,
+        });
+    </script>
+    <script src="tic_tac_toe.js"></script>
+    <script>
+        function openPopup() {
+            document.getElementById('contactPopup').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('contactPopup').style.display = 'none';
+        }
+
+        document.getElementById('contactMeBtn').addEventListener('click', openPopup);
+        document.getElementById('closePopupBtn').addEventListener('click', closePopup);
+    </script>
+    <script>
+        function redirectToResume() {
+            window.open('Files/Resume_Naman Somani.pdf', '_blank');
+        }
+    </script>
+</body>
+
+</html>

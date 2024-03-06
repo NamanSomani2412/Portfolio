@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Naman Somani</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --winning-blocks: rgba(0, 255, 242, 0.637);
+        }
+
+        body {
+            overflow-x: hidden;
+            color: #fff;
+            font-family: Poppins, sans-serif;
+        }
+
+        #video-bg {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 50px;
+            background-color: rgba(44, 160, 171, 0.8);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li:nth-child(2) {
+            text-decoration: underline;
+            color: aqua;
+        }
+
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: aqua;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .first_section {
+            display: flex;
+            justify-content: space-around;
+            margin: 80px 0;
+        }
+
+        .leftside {
+            display: flex;
+            width: 80vw;
+            font-size: 2rem;
+            margin: 0 50px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .project {
+            width: 100%;
+            margin: 23px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 2px solid cyan;
+            border-radius: 100px;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .project img {
+            width: 75px;
+            height: 75px;
+            border: 2px solid cyan;
+            border-radius: 50px;
+        }
+
+        .project h1 {
+            width: 150px;
+            margin: 0 20px;
+            text-align: center;
+            font-family: Poppins, sans-serif;
+            font-size: 1.2rem;
+        }
+
+        .project h2 {
+            width: 200px;
+            margin: 0 20px;
+            text-align: lrft;
+            font-family: Poppins, sans-serif;
+            font-size: 1.2rem;
+        }
+
+        .project p {
+            width: 350px;
+            margin: 0 20px;
+            text-align: left;
+            font-family: Poppins, sans-serif;
+            font-size: 0.75rem;
+        }
+
+        .project button {
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .left-arrow {
+            display: inline-block;
+            font-family: "Satisfy", cursive;
+            font-size: 3rem;
+            color: #defffc;
+            margin: 0 10px;
+            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
+            -webkit-text-stroke: 0.2px #fff;
+        }
+
+        .right-arrow {
+            display: inline-block;
+            font-family: "Satisfy", cursive;
+            font-size: 3rem;
+            color: #defffc;
+            margin: 0 10px;
+            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
+            -webkit-text-stroke: 0.2px #fff;
+        }
+
+        .button-text {
+            display: inline-block;
+            color: #defffc;
+            font-size: 1rem;
+            text-shadow: 0 0 0.2px #00ffea, 0 0 0.4px #00ffea, 0 0 0.6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 01.4px #00ffea;
+            -webkit-text-stroke: 0.2px #fff;
+            transition: color 1s;
+            /* Add transition for smooth color change */
+        }
+
+        .button-text:hover {
+            color: #defffc;
+            text-shadow: 0 0 2px #00aeff, 0 0 4px #00aeff, 0 0 6px #00aeff, 0 0 8px #00aeff, 0 0 10px #00aeff, 0 0 12px #00aeff, 0 0 14px #00aeff;
+            -webkit-text-stroke: 0.2px #fff;
+            text-decoration: underline;
+        }
+
+        .color_Neon {
+            color: rgb(221, 252, 252);
+            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
+            -webkit-text-stroke: 0.2px #fff;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+
+<body>
+    <video autoplay muted loop id="video-bg">
+        <source src="IMG/bg.mp4" type="video/mp4">
+    </video>
+    <header>
+        <nav>
+            <div class="left">
+                Naman's Portfolio
+            </div>
+            <div class="right"></div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li>Projects</li>
+                <li><a href="Music.html">Music</a></li>
+                <li><a href="/">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="first_section">
+            <div class="leftside">
+                <div class="pageTitel">
+                    <span class="left-arrow">&lt</span>
+                    <span class="color_Neon">Projects List</span>
+                    <span class="right-arrow">&gt</span>
+                </div>
+                <div class="projectlist">
+
+                </div>
+                <div class="projectlist">
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+<script>
+    // Sample project data
+    const projects = [
+        {
+            id: 1,
+            imageSrc: 'Projects/Project Image/project1.jpg',
+            title: 'Game',
+            name: 'Tic Tac Toe',
+            description: 'Description of Project 1',
+            link: 'home.html'
+        },
+        {
+            id: 2,
+            imageSrc: 'project2.jpg',
+            title: 'Site',
+            name: 'My Music',
+            description: 'Description of Project 2',
+            link: 'Music.html'
+        },
+        {
+            id: 3,
+            imageSrc: 'project3.jpg',
+            title: 'Project',
+            name: 'Vending Machine',
+            description: 'Description of Project 3',
+            link: 'https://github.com/NamanSomani2412/Project_One.git'
+        },
+        {
+            id: 4,
+            imageSrc: 'project4.jpg',
+            title: 'IDK',
+            name: 'Project 4',
+            description: 'Description of Project 4',
+            link: '/'
+        },
+    ];
+
+    function populateProjects() {
+        const projectListDiv = document.querySelector('.projectlist');
+        projects.forEach(project => {
+            const projectDiv = document.createElement('div');
+            projectDiv.classList.add('project');
+            projectDiv.id = project.id;
+
+            const image = document.createElement('img');
+            image.src = project.imageSrc;
+            projectDiv.appendChild(image);
+
+            const title = document.createElement('h1');
+            title.textContent = project.title;
+            projectDiv.appendChild(title);
+
+            const name = document.createElement('h2');
+            name.textContent = project.name;
+            projectDiv.appendChild(name);
+
+            const description = document.createElement('p');
+            description.textContent = project.description;
+            projectDiv.appendChild(description);
+
+            const button = document.createElement('button');
+
+            // Create spans for different parts of the button text
+            const leftArrowSpan = document.createElement('span');
+            leftArrowSpan.textContent = '<';
+            leftArrowSpan.classList.add('left-arrow');
+
+            const buttonTextSpan = document.createElement('span');
+            buttonTextSpan.textContent = 'Learn More';
+            buttonTextSpan.classList.add('button-text');
+
+            const rightArrowSpan = document.createElement('span');
+            rightArrowSpan.textContent = '>';
+            rightArrowSpan.classList.add('right-arrow');
+
+            button.appendChild(leftArrowSpan);
+            button.appendChild(buttonTextSpan);
+            button.appendChild(rightArrowSpan);
+
+            button.addEventListener('click', function () {
+                window.location.href = project.link;
+            });
+            projectDiv.appendChild(button);
+
+            projectListDiv.appendChild(projectDiv);
+        });
+    }
+
+    populateProjects();
+</script>
+
+</html>
