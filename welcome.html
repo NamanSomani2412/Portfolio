@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
         body {
             margin: 0;
             padding: 0;
@@ -37,142 +38,103 @@
 
         .Main {
             display: flex;
-            justify-content: center;
-            align-items: stretch;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            width: 80vw;
+            height: 100vh;
+            margin: 10px 10vw;
         }
 
-        .Main .welcome-container {
-            top: 0%;
+        .welcome-container {
+            margin-top: 45vh;
             position: relative;
+            width: 50%;
+            height: 100%;
             display: flex;
-            flex-direction: column;
+            flex-flow: column;
+            align-items: center;
             justify-content: flex-start;
-            align-items: flex-start;
+            color: #defffc;
+            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
+            -webkit-text-stroke: 0.2px #fff;
+            line-height: 1.5;
+        }
+
+        .message {
+            font-size: 2em;
+            text-align: left;
+            padding: 10px;
+            min-width: max-content;
+            min-height: max-content;
+        }
+
+        .image-container {
+            position: relative;
             width: 50%;
-            height: 100vh;
-            flex-wrap: nowrap;
-        }
-
-        .Main .welcome-container .message_1 {
-            margin-top: 27vh;
-            font-size: 2em;
-            text-align: left;
-            padding: 10px;
-            min-width: max-content;
-            min-height: max-content;
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
             color: #defffc;
             text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
             -webkit-text-stroke: 0.2px #fff;
             line-height: 1.5;
-            margin-left: 15%;
         }
 
-        .Main .welcome-container .message {
-            position: static;
-            font-size: 2em;
-            text-align: left;
-            padding: 10px;
-            min-width: max-content;
-            min-height: max-content;
-            color: #defffc;
-            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
-            -webkit-text-stroke: 0.2px #fff;
-            line-height: 1.5;
-            margin-left: 15%;
-        }
-
-        .Main .image-container {
-            top: 0%;
+        .hexagon {
+            margin: -10px 1px;
+            width: 80%;
+            height: 27%;
             position: relative;
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            width: 50%;
-            height: 100vh;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
         }
 
-        .hexagon-top {
-            width: 260px;
-            height: 260px;
-            background: #00ffea;
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            position: absolute;
-            top: 3vh;
-            right: 3vh;
+        .hexagon-clip {
+            width: 180px;
+            height: 180px;
             display: flex;
             align-items: center;
-            justify-content: space-evenly;
-        }
-
-        .hexagon-mid {
-            width: 260px;
-            height: 260px;
+            justify-content: center;
+            position: relative;
             background: #00ffea;
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            position: absolute;
-            top: 32vh;
-            right: 24vh;
+        }
+
+        .hexagon-clip:nth-child(2)~.hexagon-clip:nth-child(3) {
+            min-width: 180px;
+            min-height: 180px;
+        }
+
+        .hexagon-clip img {
+            width: 95%;
+            height: 95%;
+            object-fit: cover;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+        .button-container {
             display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-
-        .hexagon-bottom {
-            width: 260px;
-            height: 260px;
-            background: #00ffea;
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            position: absolute;
-            bottom: 3vh;
-            right: 3vh;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-
-        .hexagon-1 {
-            width: 250px;
-            height: 250px;
-            position: fixed;
-            background: #00ffea;
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            background-image: url(IMG/image\(1\).png);
-            background-size: cover;
-        }
-
-        .hexagon-2 {
-            width: 250px;
-            height: 250px;
-            position: fixed;
-            background: #00ffea;
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            background-image: url(IMG/image\(2\).png);
-            background-size: cover;
-        }
-
-        .hexagon-3 {
-            width: 250px;
-            height: 250px;
-            position: fixed;
-            background: #00ffea;
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            background-image: url(IMG/image\(3\).png);
-            background-size: cover;
+            position: sticky;
+            width: 100vw;
+            height: 100px;
+            justify-content: center;
+            bottom: 50px;
         }
 
         .get-into-button {
             padding: 10px 20px;
             position: absolute;
-            right: 85vh;
-            top: 70vh;
             border: none;
             cursor: pointer;
             position: absolute;
-            overflow: hidden;
             display: flex;
             align-items: center;
             background-color: rgba(0, 0, 0, 0);
-            /* Transparent background */
         }
 
         .arrow {
@@ -211,32 +173,42 @@
     </video>
     <div class="Main">
         <div class="welcome-container">
-            <p class="message_1">Hii .. It's Naman Somani</p>
-            <p class="message"></p>
+            <div class="message"></div>
         </div>
         <div class="image-container">
-            <div class="hexagon-top">
-                <div class="hexagon-1"></div>
+            <div class="hexagon">
+                <div class="hexagon-clip">
+                    <img src="IMG/blue.gif"></img>
+                </div>
             </div>
-            <div class="hexagon-mid">
-                <div class="hexagon-2"></div>
+            <div class="hexagon">
+                <div class="hexagon-clip">
+                    <img src="IMG/image(4).png"></img>
+                </div>
+                <div class="hexagon-clip">
+                    <img src="IMG/image(3).png"></img>
+                </div>
             </div>
-            <div class="hexagon-bottom">
-                <div class="hexagon-3"></div>
+            <div class="hexagon">
+                <div class="hexagon-clip">
+                    <img src="IMG/gettyimages-820988268-640_adpp.gif"></img>
+                </div>
             </div>
         </div>
-        <div>
-            <button onclick="redirectToMain()" class="get-into-button">
-                <span class="arrow">&lt;</span>
-                <span class="button-text">Get INTO..</span>
-                <span class="arrow">&gt;</span>
-            </button>
-        </div>
-
+    </div>
+    <div class="button-container">
+        <button onclick="redirectToMain()" class="get-into-button">
+            <span class="arrow">&lt;</span>
+            <span class="button-text">Get INTO..</span>
+            <span class="arrow">&gt;</span>
+        </button>
     </div>
     <script>
         const welcomeMessage = document.querySelector('.message');
         const messageText = [
+            ["Hii .. It's Naman Somani"],
+            [""],
+            [""],
             ["Welcome to my Portfolio!"],
             ["Come explore with me,"],
             ["and discover the projects"],
@@ -251,16 +223,15 @@
                 if (Windex < messageText[Lindex][0].length) {
                     welcomeMessage.innerHTML += messageText[Lindex][0].charAt(Windex);
                     Windex++;
-                    setTimeout(typeWriter, 25); // Adjust typing speed here
+                    setTimeout(typeWriter, 25);
                 } else {
-                    welcomeMessage.innerHTML += "<br>"; // Add line break after completing a line
+                    welcomeMessage.innerHTML += "<br>";
                     Lindex++;
-                    Windex = 0; // Reset Windex for the next line
-                    setTimeout(typeWriter, 80); // Adjust typing speed here
+                    Windex = 0;
+                    setTimeout(typeWriter, 80);
                 }
             }
         }
-
 
         function redirectToMain() {
             window.location.href = "home.html";
