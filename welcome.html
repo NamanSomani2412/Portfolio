@@ -4,166 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Naman Somani</title>
+    <title>Welcome - Naman Somani</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        #video-bg {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -1;
-        }
-
-        .content {
-            position: relative;
-            z-index: 1;
-            color: #fff;
-            font-family: Poppins, sans-serif;
-        }
-
-
-        .Main {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            width: 80vw;
-            height: 100vh;
-            margin: 10px 10vw;
-        }
-
-        .welcome-container {
-            margin-top: 45vh;
-            position: relative;
-            width: 50%;
-            height: 100%;
-            display: flex;
-            flex-flow: column;
-            align-items: center;
-            justify-content: flex-start;
-            color: #defffc;
-            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
-            -webkit-text-stroke: 0.2px #fff;
-            line-height: 1.5;
-        }
-
-        .message {
-            font-size: 2em;
-            text-align: left;
-            padding: 10px;
-            min-width: max-content;
-            min-height: max-content;
-        }
-
-        .image-container {
-            position: relative;
-            width: 50%;
-            height: 100%;
-            display: flex;
-            flex-flow: column;
-            align-items: center;
-            justify-content: center;
-            color: #defffc;
-            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
-            -webkit-text-stroke: 0.2px #fff;
-            line-height: 1.5;
-        }
-
-        .hexagon {
-            margin: -10px 1px;
-            width: 80%;
-            height: 27%;
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-around;
-        }
-
-        .hexagon-clip {
-            width: 180px;
-            height: 180px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            background: #00ffea;
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-        }
-
-        .hexagon-clip:nth-child(2)~.hexagon-clip:nth-child(3) {
-            min-width: 180px;
-            min-height: 180px;
-        }
-
-        .hexagon-clip img {
-            width: 95%;
-            height: 95%;
-            object-fit: cover;
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-        }
-
-        .button-container {
-            display: flex;
-            position: sticky;
-            width: 100vw;
-            height: 100px;
-            justify-content: center;
-            bottom: 50px;
-        }
-
-        .get-into-button {
-            padding: 10px 20px;
-            position: absolute;
-            border: none;
-            cursor: pointer;
-            position: absolute;
-            display: flex;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0);
-        }
-
-        .arrow {
-            display: inline-block;
-            font-family: "Satisfy", cursive;
-            font-size: 50px;
-            color: #defffc;
-            margin: 0 10px;
-            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
-            -webkit-text-stroke: 0.2px #fff;
-        }
-
-        .button-text {
-            display: inline-block;
-            color: #defffc;
-            font-size: 24px;
-            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
-            -webkit-text-stroke: 0.2px #fff;
-            transition: color 1s;
-            /* Add transition for smooth color change */
-        }
-
-        .button-text:hover {
-            color: #defffc;
-            text-shadow: 0 0 2px #00aeff, 0 0 4px #00aeff, 0 0 6px #00aeff, 0 0 8px #00aeff, 0 0 10px #00aeff, 0 0 12px #00aeff, 0 0 14px #00aeff;
-            -webkit-text-stroke: 0.2px #fff;
-            text-decoration: underline;
-        }
-    </style>
+    <link href="CSS/Style.css" rel="stylesheet">
+    <link href="CSS/welcome.css" rel="stylesheet">
 </head>
 
 <body>
@@ -173,35 +21,31 @@
     </video>
     <div class="Main">
         <div class="welcome-container">
-            <div class="message"></div>
+            <div class="message Neon_text" style="height: 360px; width: 400px;"></div>
+            <div class="button">
+                <a href="home.html" id="Get_Into">
+                    <span class="arrow Neon_text">&lt;</span>
+                    <span class="button-text Neon_text">Get INTO</span>
+                    <span class="arrow Neon_text">&gt;</span>
+                </a>
+            </div>
         </div>
         <div class="image-container">
-            <div class="hexagon">
-                <div class="hexagon-clip">
-                    <img src="IMG/blue.gif"></img>
-                </div>
+            <div class="hexagon" id="Hex-1">
+                <img src="IMG/blue.gif"></img>
             </div>
-            <div class="hexagon">
-                <div class="hexagon-clip">
+            <div class="row">
+                <div class="hexagon" id="Hex-2">
                     <img src="IMG/image(4).png"></img>
                 </div>
-                <div class="hexagon-clip">
+                <div class="hexagon" id="Hex-3">
                     <img src="IMG/image(3).png"></img>
                 </div>
             </div>
-            <div class="hexagon">
-                <div class="hexagon-clip">
-                    <img src="IMG/gettyimages-820988268-640_adpp.gif"></img>
-                </div>
+            <div class="hexagon" id="Hex-4">
+                <img src="IMG/gettyimages-820988268-640_adpp.gif"></img>
             </div>
         </div>
-    </div>
-    <div class="button-container">
-        <button onclick="redirectToMain()" class="get-into-button">
-            <span class="arrow">&lt;</span>
-            <span class="button-text">Get INTO..</span>
-            <span class="arrow">&gt;</span>
-        </button>
     </div>
     <script>
         const welcomeMessage = document.querySelector('.message');
@@ -231,10 +75,6 @@
                     setTimeout(typeWriter, 80);
                 }
             }
-        }
-
-        function redirectToMain() {
-            window.location.href = "home.html";
         }
 
         document.addEventListener("DOMContentLoaded", typeWriter());

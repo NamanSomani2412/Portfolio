@@ -1,0 +1,86 @@
+.Main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 90vh;
+    margin: 10px 10px;
+}
+
+.welcome-container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    line-height: 1.5;
+}
+
+.message {
+    font-size: 2em;
+    text-align: left;
+    padding: 10px;
+    min-width: max-content;
+    min-height: max-content;
+}
+
+.image-container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    line-height: 1.5;
+}
+
+.row{
+    margin: -10px 0;
+    min-width: 360px;
+    width: 400px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.hexagon {
+    min-width: 180px;
+    min-height: 180px;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    background: #00ffea;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hexagon img {
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+@media only screen and (max-width :1100px){
+    .main{
+        margin: 0 0;
+    }
+    .welcome-container {
+        width: 100%;
+    }
+    .image-container {
+        display: none;
+    }
+    .message{
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+}
