@@ -8,334 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        :root {
-            --winning-blocks: rgba(0, 255, 242, 0.637);
-        }
-
-        body {
-            overflow: hidden;
-            color: #fff;
-            font-family: Poppins, sans-serif;
-        }
-
-        #video-bg {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -1;
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 50px;
-            background-color: rgba(44, 160, 171, 0.8);
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: space-around;
-        }
-
-        nav ul li {
-            list-style: none;
-            margin: 0 23px;
-        }
-
-        nav ul li:nth-child(3) {
-            text-decoration: underline;
-            color: aqua;
-        }
-
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-            color: aqua;
-        }
-
-        .left {
-            font-size: 1.5rem;
-        }
-
-        .first_section {
-            display: flex;
-            justify-content: space-around;
-            margin: 60px 0;
-        }
-
-        .leftside {
-            display: flex;
-            width: 80vw;
-            font-size: 2rem;
-            margin: -10px 0px;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .MusicArea {
-            width: 1460px;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            background-color: rgb(208, 255, 255, 0.2);
-            border: 1px solid rgb(208, 255, 255);
-            box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
-            border-radius: 10px;
-            height: 566px;
-        }
-
-        .MoodPlaylist {
-            width: 250px;
-            display: flex;
-            flex-flow: column;
-            background-color: rgb(0, 0, 0);
-            border: 1px solid rgb(208, 255, 255);
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-            height: 100%;
-        }
-
-        .MoodPlaylistTop {
-            margin: 10px 0;
-            display: flex;
-            font-size: 1.5rem;
-            justify-content: center;
-            color: rgb(221, 252, 252);
-            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
-            -webkit-text-stroke: 0.2px #fff;
-        }
-
-        .MoodPlaylistelements {
-            height: 80%;
-            margin: 15px 10px;
-            display: flex;
-            font-size: 1.25rem;
-            flex-flow: column;
-            align-items: flex-end;
-            justify-content: center;
-            list-style: none;
-        }
-
-        .MoodPlaylistelements li {
-            height: 50px;
-            width: 100%;
-            cursor: pointer;
-            display: flex;
-            text-align: right;
-            justify-content: flex-end;
-            align-items: center;
-        }
-
-        .MoodPlaylistelements li:nth-child(1) {
-            text-decoration: underline;
-            color: #00ffea;
-        }
-
-        .MoodPlaylistelements li a {
-            text-decoration: none;
-            color: #fff;
-            margin: 10px 0;
-        }
-
-        .MoodPlaylistelements li a:hover {
-            text-decoration: underline;
-            color: #00ffea;
-        }
-
-        .Songslist {
-            margin-left: 5px;
-            margin-right: 20px;
-        }
-
-        .song {
-            width: 650px;
-            height: 52px;
-            margin: 2px 0;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            border: 2px solid cyan;
-            border-radius: 100px;
-            background-color: rgba(255, 255, 255, 0.2);
-            color: black;
-        }
-
-        .song img {
-            width: 50px;
-            height: 50px;
-            border: 2px solid cyan;
-            border-radius: 50px;
-        }
-
-        .song h2 {
-            width: 400px;
-            margin: 0 10px;
-            text-align: lrft;
-            font-family: Poppins, sans-serif;
-            font-size: 1rem;
-        }
-
-        .song p {
-            width: 70px;
-            margin: 0 20px;
-            text-align: left;
-            font-family: Poppins, sans-serif;
-            font-size: 0.75rem;
-        }
-
-        .song button {
-            border: none;
-            cursor: pointer;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0);
-        }
-
-        .left-arrow {
-            display: inline-block;
-            font-family: "Satisfy", cursive;
-            font-size: 3rem;
-            color: #defffc;
-            margin: 0 10px;
-            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
-            -webkit-text-stroke: 0.2px #fff;
-        }
-
-        .right-arrow {
-            display: inline-block;
-            font-family: "Satisfy", cursive;
-            font-size: 3rem;
-            color: #defffc;
-            margin: 0 10px;
-            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
-            -webkit-text-stroke: 0.2px #fff;
-        }
-
-        .button-text {
-            display: inline-block;
-            color: #defffc;
-            font-size: rem;
-            text-shadow: 0 0 0.2px #00ffea, 0 0 0.4px #00ffea, 0 0 0.6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 01.4px #00ffea;
-            -webkit-text-stroke: 0.2px #fff;
-            transition: color 1s;
-            /* Add transition for smooth color change */
-        }
-
-        .button-text:hover {
-            color: #defffc;
-            text-shadow: 0 0 2px #00aeff, 0 0 4px #00aeff, 0 0 6px #00aeff, 0 0 8px #00aeff, 0 0 10px #00aeff, 0 0 12px #00aeff, 0 0 14px #00aeff;
-            -webkit-text-stroke: 0.2px #fff;
-            text-decoration: underline;
-        }
-
-        .SongWindow {
-            width: 500px;
-            height: 500px;
-            display: flex;
-            flex-flow: column;
-            justify-content: center;
-            background-color: rgb(0, 0, 0);
-            border: 1px solid rgb(208, 255, 255);
-            border-radius: 10px;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .SongWindow .Songimage {
-            width: 250px;
-            height: 250px;
-            background-color: #fff;
-            border-radius: 10px;
-            background-size: cover;
-        }
-
-        .SongWindow .SongName {
-            font-size: 1rem;
-            color: #fff;
-            display: flex;
-            flex-flow: row;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .SongWindow .progressBar {
-            width: 80%;
-            display: flex;
-            flex-flow: row;
-            justify-content: center;
-            font-size: 0.8rem;
-        }
-
-        .SongWindow .progressBar #SongProgress {
-            width: 80%;
-            margin-right: 10px;
-            cursor: pointer;
-        }
-
-        .SongWindow .NavButtons .previous {
-            min-width: 60px;
-            min-height: 60px;
-            border: none;
-            cursor: pointer;
-            background-color: rgba(0, 0, 0, 0);
-            margin: 0 5px;
-        }
-
-        .SongWindow .NavButtons .play-pause {
-            min-width: 60px;
-            min-height: 60px;
-            border: none;
-            cursor: pointer;
-            background-color: rgba(0, 0, 0, 0);
-            margin: 0 5px;
-        }
-
-        .SongWindow .NavButtons .next {
-            min-width: 60px;
-            min-height: 60px;
-            border: none;
-            cursor: pointer;
-            background-color: rgba(0, 0, 0, 0);
-            margin: 0 10px;
-        }
-
-
-        .color_Neon {
-            color: rgb(221, 252, 252);
-            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
-            -webkit-text-stroke: 0.2px #fff;
-        }
-
-        .neon-blue-bg {
-            background-color: rgba(0, 0, 255, 0.5);
-
-        }
-    </style>
+    <link href="CSS/Style.css" rel="stylesheet">
+    <link href="CSS/Music.css" rel="stylesheet">
 </head>
-
 
 <body>
     <video autoplay muted loop id="video-bg">
@@ -351,14 +27,29 @@
                 <li><a href="home.html">Home</a></li>
                 <li><a href="Projects.html">Projects</a></li>
                 <li>Music</li>
-                <li><a href="/">Contact</a></li>
+                <li class="games-dropdown">
+                    <a href="#">Games</a>
+                    <div class="dropdown-content">
+                        <div class="games-grid">
+                            <div><a href="tic_tac_toe.html">
+                                <i class="fa-solid fa-2x fa-trophy" style="color: #74C0FC;"></i>
+                            </a></div>
+                            <div><a href="#">
+                                <i class="fa-solid fa-2x fa-chess-queen" style="color: #74C0FC;"></i>
+                            </a></div>
+                            <div><a href="#">
+                                <i class="fa-solid fa-2x fa-puzzle-piece" style="color: #74C0FC;"></i>
+                            </a></div>
+                            <!-- Add more game links as needed -->
+                        </div>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="first_section">
-            <div class="leftside">
                 <div class="pageTitel">
                     <span class="left-arrow">&lt</span>
                     <span class="color_Neon">My Music List</span>
@@ -401,13 +92,19 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
     </main>
+
+    <footer>
+        <div class="foot">
+            <H3>Copyright © 2024 Naman Somani. All rights reserved.</H3>
+            <p>Work in Progress.. Not the final Product</p>
+        </div>
+    </footer>
 
 </body>
 
 <script src="https://kit.fontawesome.com/15b6bf94a7.js" crossorigin="anonymous"></script>
-<script src="Music.js"></script>
+<script src="JS/Music.js"></script>
 
 </html>
