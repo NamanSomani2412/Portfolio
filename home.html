@@ -8,256 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-        }
 
-        :root{
-            --winning-blocks : rgba(0, 255, 242, 0.637);
-        }
-
-        body {
-            overflow: hidden;
-            color: #fff;
-            font-family: Poppins, sans-serif;
-        }
-
-        #video-bg {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -1;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 50px;
-            background-color: RGB(44, 160, 171, 0.8);
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: space-around;
-        }
-
-        nav ul li {
-            list-style: none;
-            margin: 0 23px;
-        }
-
-        nav ul li:first-child {
-            text-decoration: underline;
-            color: aqua;
-        }
-
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-            color: aqua;
-        }
-
-        .left {
-            font-size: 1.5rem;
-        }
-
-        .first_section {
-            display: flex;
-            justify-content: space-around;
-            margin: 50px 0;
-        }
-
-        .first_section>div {
-            display: flex;
-            flex-direction: column;
-            justify-content: left;
-            width: 33%;
-        }
-
-        .leftside {
-            min-width: 450px;
-            font-size: 2rem;
-            margin: 50px 50px;
-        }
-
-        .buttons {
-            margin-top: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: left;
-            width: 100%;
-        }
-
-        .resume-download-button {
-            border: none;
-            cursor: pointer;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0);
-            /* Transparent background */
-        }
-
-        .Contact-me-button {
-            border: none;
-            cursor: pointer;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0);
-            /* Transparent background */
-        }
-
-        .arrow {
-            display: inline-block;
-            font-family: "Satisfy", cursive;
-            font-size: 50px;
-            color: #defffc;
-            margin: 0 10px;
-            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
-            -webkit-text-stroke: 0.2px #fff;
-        }
-
-        .button-text {
-            display: inline-block;
-            color: #defffc;
-            font-size: 24px;
-            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
-            -webkit-text-stroke: 0.2px #fff;
-            transition: color 1s;
-            /* Add transition for smooth color change */
-        }
-
-        .button-text:hover {
-            color: #defffc;
-            text-shadow: 0 0 2px #00aeff, 0 0 4px #00aeff, 0 0 6px #00aeff, 0 0 8px #00aeff, 0 0 10px #00aeff, 0 0 12px #00aeff, 0 0 14px #00aeff;
-            -webkit-text-stroke: 0.2px #fff;
-            text-decoration: underline;
-        }
-
-        .rightside {
-            display: flex;
-            align-items: center;
-            min-width: 450px;
-            height: 450px;
-            background-color: rgb(0, 0, 0, .8);
-            border-radius: 10px;
-            border: 1px solid rgb(208, 255, 255);
-            box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
-            margin: 0 100px;
-        }
-
-        .game_name {
-            display: flex;
-            align-items: center;
-            ;
-            color: #defffc;
-            font-size: 30px;
-            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
-            -webkit-text-stroke: 0.2px #fff;
-        }
-
-        .game_update {
-            color: #ffffff;
-            font-size: 1rem;
-        }
-
-        .game_board {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 10px 0;
-            width: 270px;
-            cursor: pointer;
-        }
-
-
-        .box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: "Permanent Marker", cursive;
-            font-size: 3rem;
-            color: rgb(221, 252, 252);
-            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
-            -webkit-text-stroke: 0.2px #fff;
-            height: 88px;
-            width: 88px;
-            border-right: 3px solid #00ffea;
-            border-bottom: 3px solid #00ffea;
-        }
-
-        .box:nth-child(3n) {
-            border-right: none;
-        }
-
-        .box:nth-child(6) ~ .box {
-            border-bottom: none;
-        }
-
-        .reset-button {
-            border: none;
-            cursor: pointer;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0);
-            /* Transparent background */
-        }
-
-        .color_Neon {
-            color: rgb(221, 252, 252);
-            text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
-            -webkit-text-stroke: 0.2px #fff;
-            line-height: 1.5;
-        }
-
-        .popup {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgb(0, 0, 0 );
-            padding: 20px;
-            border: 1px solid rgb(208, 255, 255);
-            box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
-            border-radius: 10px;
-            z-index: 1000;
-            color: aqua;
-        }
-
-        .popup h2{
-            font-size: 1.2rem;
-            margin: 10px 0;
-        }
-
-        .popup p{
-            font-size: 1rem;
-            margin: 1px 0;
-        }
-
-        #closePopupBtn{
-            padding: 5px 10px;
-        }
-
-    </style>
+    <link href="CSS/Style.css" rel="stylesheet">
+    <link href="CSS/home.css" rel="stylesheet">
 </head>
 
 
@@ -265,6 +18,7 @@
     <video autoplay muted loop id="video-bg">
         <source src="IMG/bg.mp4" type="video/mp4">
     </video>
+
     <header>
         <nav>
             <div class="left">
@@ -275,90 +29,122 @@
                 <li>Home</li>
                 <li><a href="Projects.html">Projects</a></li>
                 <li><a href="Music.html">Music</a></li>
-                <li><a href="/">Contact</a></li>
+                <li class="games-dropdown">
+                    <a href="#">Games</a>
+                    <div class="dropdown-content">
+                        <div class="games-grid">
+                            <div><a href="tic_tac_toe.html">
+                                <i class="fa-solid fa-2x fa-trophy" style="color: #74C0FC;"></i>
+                            </a></div>
+                            <div><a href="#">
+                                <i class="fa-solid fa-2x fa-chess-queen" style="color: #74C0FC;"></i>
+                            </a></div>
+                            <div><a href="#">
+                                <i class="fa-solid fa-2x fa-puzzle-piece" style="color: #74C0FC;"></i>
+                            </a></div>
+                            <!-- Add more game links as needed -->
+                        </div>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="first_section">
+        <section class="first_section row-reverse">
             <div class="leftside">
-                Hii, My name is <span class="color_Neon">Naman Somani</span>
-                <div>and I am a Passionate
-                    <div class="color_Neon">
-                        <span id="element"></span>
-                    </div>
+                <div><span class="Neon_text Headding" id="element_1"></span> <br><br>
+                    My name is <span class="Neon_text">Naman Somani</span>
+                </div>
+                <div>& I am a Passionate <br>
+                    <span class="Neon_text" id="element_2"></span>
                 </div>
                 <div class="buttons">
-                    <button onclick="redirectToResume()" class="resume-download-button">
-                        <span class="arrow">&lt;</span>
-                        <span class="button-text">Resume</span>
-                        <span class="arrow">&gt;</span>
+                    <button onclick="redirectToResume()" class="button" id="Btn">
+                        <span class="arrow Neon_text">&lt;</span>
+                        <span class="button-text Neon_text">Resume</span>
+                        <span class="arrow Neon_text">&gt;</span>
                     </button>
-                    <button class="Contact-me-button" id="contactMeBtn">
-                        <span class="arrow">&lt;</span>
-                        <span class="button-text">Contact</span>
-                        <span class="arrow">&gt;</span>
+                    <button class="button" id="contactMeBtn">
+                        <span class="arrow Neon_text">&lt;</span>
+                        <span class="button-text Neon_text">Contact</span>
+                        <span class="arrow Neon_text">&gt;</span>
                     </button>
-                    <div id="contactPopup" class="popup">
-                        <h2>Contact Details</h2>
-                        <p>Email: 13nsomani@gmail.com</p>
-                        <p>Phone: +918769920927</p>
-                        <button id="closePopupBtn">Close</button>
-                    </div>
                 </div>
             </div>
-            <div class="rightside">
-                <div class="game_name">
-                    <span class="arrow">&lt</span>Tic Tac Toe<span class="arrow">&gt</span>
-                </div>
-                <div class="game_update" id ="game_update">Player X's Turn
-                </div>
-                <div class="game_board">
-                        <div class="box" id="0"></div>
-                        <div class="box" id="1"></div>
-                        <div class="box" id="2"></div>
-                        <div class="box" id="3"></div>
-                        <div class="box" id="4"></div>
-                        <div class="box" id="5"></div>
-                        <div class="box" id="6"></div>
-                        <div class="box" id="7"></div>
-                        <div class="box" id="8"></div>
-                </div>
-                <button id="reset-button" class="reset-button">
-                    <span class="arrow">&lt;</span>
-                    <span class="button-text">Reset</span>
-                    <span class="arrow">&gt;</span>
-                </button>
+            <div class="rightside bg-Svg">
+                <!--?xml version="1.0" standalone="no"?-->
+                <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+                            <stop id="stop1" stop-color="rgba(0, 242.147, 255, 1)" offset="0%"></stop>
+                            <stop id="stop2" stop-color="rgba(215.979, 254.273, 255, 1)" offset="100%"></stop>
+                        </linearGradient>
+                        <!-- Define a clipPath to clip the image -->
+                        <clipPath id="clip-path">
+                            <path fill="#fff"
+                                d="M22.5,-28.2C28.4,-21.8,32,-14,32.7,-6.3C33.5,1.4,31.3,9.1,27.6,16.1C23.8,23.1,18.4,29.4,11.5,32.1C4.6,34.9,-3.8,34.1,-11.2,31.2C-18.7,28.4,-25.2,23.4,-30.8,16.5C-36.4,9.6,-41,0.8,-40.1,-7.5C-39.2,-15.9,-32.8,-23.7,-25.2,-29.7C-17.6,-35.8,-8.8,-40.1,-0.3,-39.8C8.3,-39.5,16.5,-34.5,22.5,-28.2Z"
+                                width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
+                                style="transition: all 0.3s ease 0s;" stroke="url(#sw-gradient)"></path>
+                        </clipPath>
+                    </defs>
+                    <!-- Use the clipped path as a clip-path -->
+                    <image xlink:href="IMG/Profile.png" width="100%" height="100%" clip-path="url(#clip-path)" />
+                </svg>
+            </div>
+            <div class="card-container Neon_text" id="cardContainer">
+                <div class="card">
+                    <!-- Front face of the card -->
+                    <div class="front">
+                        <div class="logo-container">
+                            <div class="profile">
+                                <img src="IMG/V-C.png">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Back face of the card -->
+                    <div class="back">
 
+                        <div class="R-profile">
+                            <div class="details">
+                                <h2>Naman Somani<br><span class="subscr">- Web Designer</span></h2>
+                                <p>Email: 13nsomani@gmail.com</p>
+                                <p>Phone: +91 8769920927</p>
+                            </div>
+                            <div class="social-media">
+                                <a href="#" class="social-link">
+                                    <i class="fa-brands fa-instagram" style="color: #00ffea;"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fa-brands fa-linkedin" style="color: #00ffea;"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fa-brands fa-github" style="color: #00ffea;"></i>
+                                </a>
+                            </div>
+                            <button class="Normal-btn" id="closePopupBtn">
+                                <i class="fa-solid fa-xmark" style="color: #00ffea;"></i>
+                            </button>
+                            <button class="Normal-btn" id="savePopupBtn">
+                                <i class="fa-solid fa-bookmark fa-fade" style="color: #00ffea;"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
+
+    <footer>
+        <div class="foot">
+            <H3>Copyright © 2024 Naman Somani. All rights reserved.</H3>
+            <p>Work in Progress.. Not the final Product</p>
+        </div>
+    </footer>
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed('#element', {
-            strings: ['Web Developer', 'Graphic Designer', 'Web Designer'],
-            typeSpeed: 60,
-        });
-    </script>
-    <script src="tic_tac_toe.js"></script>
-    <script>
-        function openPopup() {
-            document.getElementById('contactPopup').style.display = 'flex';
-        }
-
-        function closePopup() {
-            document.getElementById('contactPopup').style.display = 'none';
-        }
-
-        document.getElementById('contactMeBtn').addEventListener('click', openPopup);
-        document.getElementById('closePopupBtn').addEventListener('click', closePopup);
-    </script>
-    <script>
-        function redirectToResume() {
-            window.open('Files/Resume_Naman Somani.pdf', '_blank');
-        }
-    </script>
+    <script src="https://kit.fontawesome.com/15b6bf94a7.js" crossorigin="anonymous"></script>
+    <script src="JS/home.js"></script>
 </body>
 
 </html>

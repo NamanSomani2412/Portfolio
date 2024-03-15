@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - Naman Somani</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <link href="CSS/Style.css" rel="stylesheet">
+    <link href="CSS/tic_tac_toe.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <video autoplay muted loop id="video-bg">
+        <source src="IMG/bg.mp4" type="video/mp4">
+    </video>
+
+    <header>
+        <nav>
+            <div class="left">
+                Naman's Portfolio
+            </div>
+            <div class="right"></div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="Music.html">Music</a></li>
+                <li class="games-dropdown">
+                    <a href="#" style="color: aqua;">Games</a>
+                    <div class="dropdown-content">
+                        <div class="games-grid">
+                            <div><a href="tic_tac_toe.html">
+                                    <i class="fa-solid fa-2x fa-trophy" style="color: aqua;"></i>
+                                </a></div>
+                            <div><a href="#">
+                                    <i class="fa-solid fa-2x fa-chess-queen" style="color: aqua;"></i>
+                                </a></div>
+                            <div><a href="#">
+                                    <i class="fa-solid fa-2x fa-puzzle-piece" style="color: aqua;"></i>
+                                </a></div>
+                            <!-- Add more game links as needed -->
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="rightside">
+            <div class="game_name">
+                <span class="arrow">&lt</span>Tic Tac Toe<span class="arrow">&gt</span>
+            </div>
+            <div class="game_update" id="game_update">Player X's Turn
+            </div>
+            <div class="game_board">
+                <div class="box" id="0"></div>
+                <div class="box" id="1"></div>
+                <div class="box" id="2"></div>
+                <div class="box" id="3"></div>
+                <div class="box" id="4"></div>
+                <div class="box" id="5"></div>
+                <div class="box" id="6"></div>
+                <div class="box" id="7"></div>
+                <div class="box" id="8"></div>
+            </div>
+            <button id="reset-button" class="reset-button">
+                <span class="arrow Neon_text">&lt;</span>
+                <span class="button-text Neon_text">Reset</span>
+                <span class="arrow Neon_text">&gt;</span>
+            </button>
+
+        </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="foot">
+            <H3>Copyright © 2024 Naman Somani. All rights reserved.</H3>
+            <p>Work in Progress.. Not the final Product</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://kit.fontawesome.com/15b6bf94a7.js" crossorigin="anonymous"></script>
+    <script src="JS/tic_tac_toe.js"></script>
+</body>
+
+</html>
