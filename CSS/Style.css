@@ -10,6 +10,9 @@
 }
 
 body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -29,8 +32,10 @@ body {
 }
 
 header {
+    position: absolute;
     width: 100%;
     display: flex;
+    top: 0px;
 }
 
 nav {
@@ -59,7 +64,7 @@ nav ul li {
     display: flex;
     align-items: center;
     list-style: none;
-    margin:  23px;
+    margin: 23px;
 }
 
 nav ul li a {
@@ -78,7 +83,8 @@ nav ul li a:hover {
     position: absolute;
     top: 60px;
     right: 95px;
-    background-color: RGB(44, 160, 171, 0.8);;
+    background-color: RGB(44, 160, 171, 0.8);
+    ;
     border: 1px solid #00ffea;
     border-radius: 10px;
     z-index: 1;
@@ -105,7 +111,7 @@ nav ul li a:hover {
     border: 1px solid #00ffea;
     border-radius: 40px;
     margin: auto;
-    background-color: RGB(0,0,0,0.8);
+    background-color: RGB(0, 0, 0, 0.8);
     font-size: 14px;
 }
 
@@ -115,13 +121,14 @@ nav ul li a:hover {
 }
 
 .games-grid div:hover {
-    background-color: RGB(0,0,0,0.5);
+    background-color: RGB(0, 0, 0, 0.5);
     border: 1px solid #00aeff;
 }
 
 main {
     width: 100%;
-    height: 80vh;
+    height: 10vh;
+    margin-top: 1.5%;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -150,6 +157,35 @@ main {
     cursor: pointer;
 }
 
+footer {
+    position: absolute;
+    bottom: 0px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    background-color: RGB(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.foot {
+    text-align: center;
+}
+
+footer h3 {
+    text-decoration: line-through;
+    font-size: 14px;
+    font-weight: 300;
+    color: thistle;
+}
+
+footer p {
+    font-size: 10px;
+    font-weight: 200;
+    color: thistle;
+}
+
 .Neon_text {
     color: #defffc;
     text-shadow: 0 0 2px #00ffea, 0 0 4px #00ffea, 0 0 6px #00ffea, 0 0 8px #00ffea, 0 0 10px #00ffea, 0 0 12px #00ffea, 0 0 14px #00ffea;
@@ -168,7 +204,7 @@ main {
     font-family: Poppins, sans-serif;
 }
 
-.Headding{
+.Headding {
     font-size: 2.5rem;
     font-weight: 500;
 }
@@ -177,31 +213,6 @@ main {
     flex-direction: row-reverse;
 }
 
-footer{
-    position: absolute;
-    bottom: 0px;
-    height: 40px;
-    width: 100%;
-    display: flex;
-    justify-items: center;
-    background-color: RGB(0, 0, 0, 0.8);
-    align-items: center;
-    justify-content: center;
-}
-
-.foot{
-    text-align: center;
-}
-
-footer h3{
-    text-decoration: line-through;
-    font-size: 14px;
-    font-weight: 300;
-    color: thistle;
-}
-
-footer p{
-    font-size: 10px;
-    font-weight: 200;
-    color: thistle;
+.small-txt {
+    font-size: medium;
 }

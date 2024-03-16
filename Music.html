@@ -51,20 +51,19 @@
     <main>
         <section class="first_section">
                 <div class="pageTitel">
-                    <span class="left-arrow">&lt</span>
-                    <span class="color_Neon">My Music List</span>
-                    <span class="right-arrow">&gt</span>
+                    <span class="arrow Neon_text">&lt</span>
+                    <span class="button-text Neon_text">My Music List</span>
+                    <span class="arrow Neon_text">&gt</span>
                 </div>
                 <div class="MusicArea">
                     <div class="MoodPlaylist">
                         <div class="MoodPlaylistTop">My Top 10 :</div>
                         <div class="MoodPlaylistelements">
-                            <li>Party Songs</li>
-                            <li><a href="">Romantic Songs</a></li>
-                            <li><a href="">Sad Songs</a></li>
-                            <li><a href="">??</a></li>
-                            <li><a href="">???</a></li>
-                            <li><a href="">????</a></li>
+                            <li><button class="list active" id="partyGenreBtn">Party Songs</button></li>
+                            <li><button class="list" id="romanticGenreBtn">Romantic Songs</button></li>
+                            <li><button class="list" id="sadGenreBtn">Sad Songs</button></li>
+                            <li><button class="list" id="motivationalGenreBtn">Motivational songs</button></li>
+                            <li><button class="list" id="classicalGenreBtn">Classical songs</button></li>
                             </ul>
                         </div>
                         <ul>
@@ -79,8 +78,8 @@
                             Badtameez Dil
                         </div>
                         <div class="progressBar">
-                            <input type="range" id="SongProgress" min="0" value="0" max="100">
                             <div class="Playtime" id="currenttime">0:00 sec</div>
+                            <input type="range" id="SongProgress" min="0" value="0" max="100">
                         </div>
                         <div class="NavButtons">
                             <button class="previous"><i class="fa-solid fa-4x fa-caret-left " id="previous"
