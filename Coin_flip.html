@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Flip Game - Naman Somani</title>
+    <link href="CSS/Style.css" rel="stylesheet">
+    <link href="CSS/coin_flip.css" rel="stylesheet">
+
+    <style>
+        .flip-button {
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        #result-paragraph {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .coin {
+            width: 100px;
+            height: 100px;
+            background-color: #363636;
+            border-radius: 50%;
+            position: relative;
+            margin: 20px auto;
+            cursor: pointer;
+            transform-style: preserve-3d;
+        }
+
+        .heads,
+        .tails {
+            width: 100%;
+            height: 100%;
+            font-size: xx-large;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+
+        .tails {
+            display: none;
+        }
+
+        @keyframes flip {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            50% {
+                transform: rotateY(180deg);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+
+        .coin.toss {
+            animation: flip 0.5s ease-in-out infinite;
+        }
+
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop id="video-bg">
+        <source src="IMG/bg.mp4" type="video/mp4">
+    </video>
+
+    <header>
+        <nav>
+            <div class="left">
+                Naman's Portfolio
+            </div>
+            <div class="right"></div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="Music.html">Music</a></li>
+                <li class="games-dropdown">
+                    <a href="#" style="color: aqua;">Games</a>
+                    <div class="dropdown-content">
+                        <div class="games-grid">
+                            <div><a href="tic_tac_toe.html">
+                                    <i class="fa-solid fa-2x fa-trophy" style="color: aqua;"></i>
+                                </a></div>
+                            <div><a href="#">
+                                    <i class="fa-solid fa-2x fa-chess-queen" style="color: aqua;"></i>
+                                </a></div>
+                            <div><a href="#">
+                                    <i class="fa-solid fa-2x fa-puzzle-piece" style="color: aqua;"></i>
+                                </a></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <main>
+            <div class="rightside">
+                <div class="game_name">
+                    <span class="arrow">&lt</span>Coin Flip<span class="arrow">&gt</span>
+                </div>
+                <div class="coin">
+                    <div class="heads">Head</div>
+                    <div class="tails">Tail</div>
+                </div>
+
+                <button id="flip-button" class="flip-button">Flip Coin</button>
+                <p id="result-paragraph"></p>
+            </div>
+        </main>
+    </main>
+
+    <footer>
+        <div class="foot">
+            <H3>Copyright © 2024 Naman Somani. All rights reserved.</H3>
+            <p>Work in Progress.. Not the final Product</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const flipButton = document.getElementById('flip-button');
+            const resultParagraph = document.getElementById('result-paragraph');
+            const coin = document.querySelector('.coin');
+            const heads = document.querySelector('.heads');
+            const tails = document.querySelector('.tails');
+
+            flipButton.addEventListener('click', function () {
+                flipCoin();
+            });
+
+            function flipCoin() {
+                resultParagraph.textContent = 'Flipping...';
+                flipButton.disabled = true; // Disable button during animation
+
+                // Add tossing animation to the coin and faces
+                coin.classList.add('toss');
+
+                setTimeout(() => {
+                    const result = Math.random() < 0.5 ? 'Heads' : 'Tails';
+                    resultParagraph.textContent = `Result: ${result}`;
+                    if (result === 'Heads') {
+                        heads.style.display = 'flex';
+                        tails.style.display = 'none';
+                    } else {
+                        heads.style.display = 'none';
+                        tails.style.display = 'flex';
+                    }
+                    flipButton.disabled = false;
+                    coin.classList.remove('toss');
+                }, 1000); // Adjusted duration for faster flipping
+            }
+        });
+
+    </script>
+    <script src="JS/coin_flip.js"></script>
+</body>
+
+</html>

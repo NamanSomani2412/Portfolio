@@ -8,75 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <link href="CSS/Style.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        :root {
-            --winning-blocks: rgba(0, 255, 242, 0.637);
-        }
-
-        body {
-            overflow-x: hidden;
-            color: #fff;
-            font-family: Poppins, sans-serif;
-        }
-
-        #video-bg {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -1;
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 50px;
-            background-color: rgba(44, 160, 171, 0.8);
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: space-around;
-        }
-
-        nav ul li {
-            list-style: none;
-            margin: 0 23px;
-        }
-
         nav ul li:nth-child(2) {
             text-decoration: underline;
             color: aqua;
-        }
-
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-            color: aqua;
-        }
-
-        .left {
-            font-size: 1.5rem;
         }
 
         .first_section {
@@ -190,27 +127,9 @@
         }
     </style>
 </head>
-
+<script src="JS/Script.js"></script>
 
 <body>
-    <video autoplay muted loop id="video-bg">
-        <source src="IMG/bg.mp4" type="video/mp4">
-    </video>
-    <header>
-        <nav>
-            <div class="left">
-                Naman's Portfolio
-            </div>
-            <div class="right"></div>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li>Projects</li>
-                <li><a href="Music.html">Music</a></li>
-                <li><a href="/">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <main>
         <section class="first_section">
             <div class="leftside">

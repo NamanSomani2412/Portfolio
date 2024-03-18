@@ -12,95 +12,54 @@
     <link href="CSS/Style.css" rel="stylesheet">
     <link href="CSS/Music.css" rel="stylesheet">
 </head>
+<script src="JS/Script.js"></script>
 
 <body>
-    <video autoplay muted loop id="video-bg">
-        <source src="IMG/bg.mp4" type="video/mp4">
-    </video>
-    <header>
-        <nav>
-            <div class="left">
-                Naman's Portfolio
-            </div>
-            <div class="right"></div>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="Projects.html">Projects</a></li>
-                <li>Music</li>
-                <li class="games-dropdown">
-                    <a href="#">Games</a>
-                    <div class="dropdown-content">
-                        <div class="games-grid">
-                            <div><a href="tic_tac_toe.html">
-                                <i class="fa-solid fa-2x fa-trophy" style="color: #74C0FC;"></i>
-                            </a></div>
-                            <div><a href="#">
-                                <i class="fa-solid fa-2x fa-chess-queen" style="color: #74C0FC;"></i>
-                            </a></div>
-                            <div><a href="#">
-                                <i class="fa-solid fa-2x fa-puzzle-piece" style="color: #74C0FC;"></i>
-                            </a></div>
-                            <!-- Add more game links as needed -->
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
     <main>
         <section class="first_section">
-                <div class="pageTitel">
-                    <span class="arrow Neon_text">&lt</span>
-                    <span class="button-text Neon_text">My Music List</span>
-                    <span class="arrow Neon_text">&gt</span>
+            <div class="pageTitel">
+                <span class="arrow Neon_text">&lt</span>
+                <span class="button-text Neon_text">My Music List</span>
+                <span class="arrow Neon_text">&gt</span>
+            </div>
+            <div class="MusicArea">
+                <div class="MoodPlaylist">
+                    <div class="MoodPlaylistTop">My Top 10 :</div>
+                    <div class="MoodPlaylistelements">
+                        <li><button class="list active" id="partyGenreBtn">Party Songs</button></li>
+                        <li><button class="list" id="romanticGenreBtn">Romantic Songs</button></li>
+                        <li><button class="list" id="sadGenreBtn">Sad Songs</button></li>
+                        <li><button class="list" id="motivationalGenreBtn">Motivational songs</button></li>
+                        <li><button class="list" id="classicalGenreBtn">Classical songs</button></li>
+                        </ul>
+                    </div>
+                    <ul>
                 </div>
-                <div class="MusicArea">
-                    <div class="MoodPlaylist">
-                        <div class="MoodPlaylistTop">My Top 10 :</div>
-                        <div class="MoodPlaylistelements">
-                            <li><button class="list active" id="partyGenreBtn">Party Songs</button></li>
-                            <li><button class="list" id="romanticGenreBtn">Romantic Songs</button></li>
-                            <li><button class="list" id="sadGenreBtn">Sad Songs</button></li>
-                            <li><button class="list" id="motivationalGenreBtn">Motivational songs</button></li>
-                            <li><button class="list" id="classicalGenreBtn">Classical songs</button></li>
-                            </ul>
-                        </div>
-                        <ul>
+                <div class="Songslist">
+                </div>
+                <div class="SongWindow">
+                    <div class="Songimage" id="Songimage"></div>
+                    <div class="SongName" id="SongName">
+                        <i class="fa-solid fa-music fa-beat" style="color: #63E6BE; margin-right: 10px;">
+                        </i>
+                        Badtameez Dil
                     </div>
-                    <div class="Songslist">
+                    <div class="progressBar">
+                        <div class="Playtime" id="currenttime">0:00 sec</div>
+                        <input type="range" id="SongProgress" min="0" value="0" max="100">
                     </div>
-                    <div class="SongWindow">
-                        <div class="Songimage" id="Songimage"></div>
-                        <div class="SongName" id="SongName">
-                            <i class="fa-solid fa-music fa-beat" style="color: #63E6BE; margin-right: 10px;">
-                            </i>
-                            Badtameez Dil
-                        </div>
-                        <div class="progressBar">
-                            <div class="Playtime" id="currenttime">0:00 sec</div>
-                            <input type="range" id="SongProgress" min="0" value="0" max="100">
-                        </div>
-                        <div class="NavButtons">
-                            <button class="previous"><i class="fa-solid fa-4x fa-caret-left " id="previous"
-                                    style="color: #63E6BE;"></i></button>
-                            <button class="play-pause"><i class="fa-solid fa-4x fa-circle-play " id="Masterplay"
-                                    style="color: #63E6BE;"></i></button>
-                            <button class="next"><i class="fa-solid fa-4x fa-caret-right " id="next"
-                                    style="color: #63E6BE;"></i></button>
-                        </div>
+                    <div class="NavButtons">
+                        <button class="previous"><i class="fa-solid fa-4x fa-caret-left " id="previous"
+                                style="color: #63E6BE;"></i></button>
+                        <button class="play-pause"><i class="fa-solid fa-4x fa-circle-play " id="Masterplay"
+                                style="color: #63E6BE;"></i></button>
+                        <button class="next"><i class="fa-solid fa-4x fa-caret-right " id="next"
+                                style="color: #63E6BE;"></i></button>
                     </div>
                 </div>
+            </div>
         </section>
     </main>
-
-    <footer>
-        <div class="foot">
-            <H3>Copyright © 2024 Naman Somani. All rights reserved.</H3>
-            <p>Work in Progress.. Not the final Product</p>
-        </div>
-    </footer>
-
 </body>
 
 <script src="https://kit.fontawesome.com/15b6bf94a7.js" crossorigin="anonymous"></script>
